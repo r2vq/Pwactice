@@ -1,0 +1,13 @@
+/* color swatches  */
+:root {
+  --swatch-peach: #fbe8e0;
+}
+
+/* default variables */
+:root {
+  --surface-color: var(--swatch-peach);
+}
+
+html {
+  background: var(--surface-color);
+}
