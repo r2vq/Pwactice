@@ -1,13 +1,42 @@
 /* color swatches  */
 :root {
-  --swatch-peach: #fbe8e0;
+  --swatch-misty-rose: #fbe8e0;
+  --swatch-snow: #fcf8f6;
+  --swatch-transparent-black: rgba(0, 0, 0, 0.2);
 }
 
 /* default variables */
 :root {
-  --surface-color: var(--swatch-peach);
+  --surface-color: var(--swatch-snow);
+  --foreground-color: var(--swatch-misty-rose);
+  --shadow-color: var(--swatch-transparent-black);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
   background: var(--surface-color);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: var(--surface-color);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background: var(--foreground-color);
+  border-radius: 4px;
+  box-shadow: 4px 4px 7px -3px var(--shadow-color);
+  display: flex;
+  height: 414px;
+  width: 296px;
 }
