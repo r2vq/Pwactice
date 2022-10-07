@@ -1,19 +1,34 @@
-let urlsToCache = [
+const URLS_TO_CACHE = [
   "/",
+  "index.html",
   "js/app.js",
-  "css/styles.css"
+  "css/styles.css",
+  "favicon.ico",
+  "app.webmanifest",
+  "android-chrome-192x192.png",
 ];
 
-self.addEventListener("fetch", () => console.log("fetch"));
+const CACHE_NAME = "pwa-assets";
 
 self.addEventListener("install", (event) => {
-  console.log("installing");
-  return event.waitUntil(
+  event.waitUntil(
     caches
-    .open("pwa-assets")
+    .open(CACHE_NAME)
     .then(cache => {
-      console.log(`caching ${urlsToCache}`);
-      return cache.addAll(urlsToCache);
+      return cache.addAll(URLS_TO_CACHE);
+    })
+    .then(() => {
+      self.skipWaiting();
+    })
+  );
+});
+
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    caches
+    .match(event.request)
+    .then(response => {
+      return response || fetch(event.request);
     })
   );
 });
