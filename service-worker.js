@@ -2,6 +2,7 @@ const URLS_TO_CACHE = [
   "/",
   "index.html",
   "js/app.js",
+  "js/deck.json",
   "css/styles.css",
   "favicon.ico",
   "app.webmanifest",
