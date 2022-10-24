@@ -1,12 +1,11 @@
 const URLS_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/js/app.js",
-  "/js/deck.json",
-  "/css/styles.css",
-  "/favicon.ico",
-  "/app.webmanifest",
-  "/android-chrome-192x192.png",
+  "index.html",
+  "js/app.js",
+  "js/deck.json",
+  "css/styles.css",
+  "favicon.ico",
+  "app.webmanifest",
+  "android-chrome-192x192.png",
 ];
 
 const CACHE_NAME = "pwa-assets";

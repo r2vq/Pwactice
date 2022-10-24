@@ -7,7 +7,7 @@ cardHolderDiv.addEventListener("click", () => {
   cardHolderDiv.classList.add("hidden");
 });
 
-fetch("/js/deck.json")
+fetch("js/deck.json")
   .then(response => {
     loadingDiv.classList.add("hidden");
     return response.json();
