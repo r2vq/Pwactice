@@ -30,6 +30,17 @@ body {
   padding: 20px;
 }
 
+#card-holder {
+  background: var(--swatch-transparent-black);
+  display: flex;
+  height: 100%;
+  left: 0;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 #deck {
   display: flex;
   gap: 8px;
@@ -43,9 +54,8 @@ body {
   box-shadow: 4px 4px 7px -3px var(--shadow-color);
   display: flex;
   flex-shrink: 0;
-  height: 414px;
-  margin: 20px;
-  width: 296px;
+  height: 100%;
+  width: 100%;
 }
 
 .list-item {
