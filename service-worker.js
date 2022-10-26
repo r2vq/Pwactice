@@ -9,6 +9,7 @@ const URLS_TO_CACHE = [
 ];
 
 const CACHE_NAME = "pwa-assets";
+const VERSION = "0.0.1";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

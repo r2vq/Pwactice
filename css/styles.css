@@ -25,6 +25,7 @@ html {
 body {
   background: var(--surface-color);
   display: flex;
+  font-family: system-ui, sans-serif;
   justify-content: center;
   margin: 0;
   padding: 20px;
@@ -39,6 +40,77 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+#card-data {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 20px;
+}
+
+#card-data div {
+  margin: 10px;
+}
+
+#card-data #title {
+  font-family: fantasy;
+  font-size: 2em;
+}
+
+#card-data #category::before {
+  content: "Category";
+  display: block;
+  font-family: fantasy, sans-serif;
+  font-size: 1.5em;
+}
+
+#card-data #category {
+  font-size: 1em;
+}
+
+#card-data #definition::before {
+  content: "Definition";
+  display: block;
+  font-family: fantasy, sans-serif;
+  font-size: 1.5em;
+}
+
+#card-data #definition {
+  font-size: 1em;
+}
+
+#card-data #conception::before {
+  content: "Conception";
+  display: block;
+  font-family: fantasy, sans-serif;
+  font-size: 1.5em;
+}
+
+#card-data #conception {
+  font-size: 1em;
+}
+
+#card-data #planning::before {
+  content: "Planning";
+  display: block;
+  font-family: fantasy, sans-serif;
+  font-size: 1.5em;
+}
+
+#card-data #planning {
+  font-size: 1em;
+}
+
+#card-data #msc::before {
+  content: "MSC";
+  display: block;
+  font-family: fantasy, sans-serif;
+  font-size: 1.5em;
+}
+
+#card-data #msc {
+  font-size: 1em;
 }
 
 #deck {

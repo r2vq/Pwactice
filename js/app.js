@@ -21,6 +21,23 @@ fetch("js/deck.json")
       cardDiv.classList.add("list-item");
 
       cardDiv.addEventListener("click", () => {
+        let clicked = json.cards.find(it => {
+          return it.name == card.card;
+        });
+        let title = cardHolderDiv.querySelector("#title");
+        title.textContent = clicked.name;
+        let category = cardHolderDiv.querySelector("#category");
+        category.textContent = clicked.category;
+        let definition = cardHolderDiv.querySelector("#definition");
+        definition.textContent = clicked.definition;
+        let conception = cardHolderDiv.querySelector("#conception");
+        conception.textContent = clicked.conception;
+        let planning = cardHolderDiv.querySelector("#planning");
+        planning.textContent = clicked.planning;
+        let execution = cardHolderDiv.querySelector("#execution");
+        execution.textContent = clicked.execution;
+        let msc = cardHolderDiv.querySelector("#msc");
+        msc.textContent = clicked.msc;
         cardHolderDiv.classList.remove("hidden");
       });
 
